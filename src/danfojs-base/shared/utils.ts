@@ -95,7 +95,7 @@ export default class Utils {
             return true;
         }
         
-        return isNaN(Number(value as any)) && typeof value !== "string");
+        return isNaN(Number(value as any)) && typeof value !== "string";
     }
 
     /**
