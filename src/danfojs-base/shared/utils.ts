@@ -91,7 +91,11 @@ export default class Utils {
      * @returns 
      */
     isEmpty<T>(value: T): boolean {
-        return value === undefined || value === null || (isNaN(value as any) && typeof value !== "string");
+        if (value === undefined || value === null) {
+            return true;
+        }
+        
+        return isNaN(Number(value as any)) && typeof value !== "string");
     }
 
     /**
